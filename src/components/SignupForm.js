@@ -36,3 +36,22 @@ const SignupForm = ({setIsLoggedIn}) => {
             toast.error("Passwords do not match");
             return ;
         }
+
+        setIsLoggedIn(true);
+        toast.success("Account Created");
+        const accountData = {
+            ...formData
+        };
+
+        const finalData = {
+            ...accountData,
+            accountType
+        }
+
+        console.log("printing Final account data ");
+        console.log(finalData);
+
+        navigate("/dashboard");
+
+    }
+
