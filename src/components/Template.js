@@ -9,7 +9,7 @@ const Template = ({title, desc1, desc2, image, formtype, setIsLoggedIn}) => {
 
     // console.log("ye rha mera form type");
     // console.log(formtype)
-return (
+  return (
     <div className='flex justify-between w-11/12 max-w-[1160px] py-12 mx-auto gap-x-12 gap-y-0'>
 
         <div className='w-11/12 max-w-[450px]' >
@@ -29,7 +29,7 @@ return (
             (<SignupForm setIsLoggedIn={setIsLoggedIn}/>):
             (<LoginForm setIsLoggedIn={setIsLoggedIn}/>)}
 
-                <div className='flex w-full items-center my-4 gap-x-2'>
+            <div className='flex w-full items-center my-4 gap-x-2'>
                 <div className='w-full h-[1px] bg-richblack-700'></div>
                 <p className='text-richblack-700 font-medium leading[1.375rem]'>
                     OR
@@ -45,7 +45,7 @@ return (
 
         </div>
 
-                <div className='relative w-11/12 max-w-[450px] '>
+        <div className='relative w-11/12 max-w-[450px] '>
             <img src={frameImage}
                 alt="Pattern"
                 width={558}
@@ -66,4 +66,3 @@ return (
 }
 
 export default Template
-
