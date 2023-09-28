@@ -146,3 +146,25 @@ const SignupForm = ({setIsLoggedIn}) => {
                         (<AiOutlineEye fontSize={24} fill='#AFB2BF'/>)}
                     </span>
                 </label>
+
+<label className='w-full relative'>
+                    <p className='text-[0.875rem] text-richblack-5 mb-1 leading-[1.375rem]'>Confirm Password<sup className='text-pink-200'>*</sup></p>
+                    <input
+                        required
+                        type= {showConfirmPassword ? ("text") : ("password")}
+                        name="confirmPassword"
+                        onChange={changeHandler}
+                        placeholder="Confirm Password"
+                        value={formData.confirmPassword}
+                        className='bg-richblack-800 rounded-[0.5rem] text-richblack-5 w-full p-[12px]'
+                    />
+                    <span 
+                     className='absolute right-3 top-[38px] cursor-pointer'
+                    onClick={() => setShowConfirmPassword((prev) => !prev)}>
+                        {showConfirmPassword ?
+
+                         (<AiOutlineEyeInvisible fontSize={24} fill='#AFB2BF'/>) : 
+
+                         (<AiOutlineEye fontSize={24} fill='#AFB2BF'/>)}
+                    </span>
+                </label>
