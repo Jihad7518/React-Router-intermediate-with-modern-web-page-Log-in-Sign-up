@@ -44,3 +44,26 @@ return (
             </button>
 
         </div>
+
+                <div className='relative w-11/12 max-w-[450px] '>
+            <img src={frameImage}
+                alt="Pattern"
+                width={558}
+                height={504}
+                loading="lazy"/>
+
+            <img src={image}
+                alt="Students"
+                width={558}
+                height={490}
+                loading="lazy"
+                className='absolute -top-4 right-4'
+                />    
+        </div>
+
+    </div>
+  )
+}
+
+export default Template
+
