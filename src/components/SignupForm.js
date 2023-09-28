@@ -14,3 +14,25 @@ const SignupForm = ({setIsLoggedIn}) => {
         password:"",
         confirmPassword:""
     })
+
+    const [showPassword, setShowPassword] = useState(false);
+    const [showConfirmPassword, setShowConfirmPassword] = useState(false);
+    const [accountType, setAccountType] = useState("student");
+
+    function changeHandler(event) {
+
+        setFormData( (prevData) =>(
+            {
+                ...prevData,
+                [event.target.name]:event.target.value
+            }
+        ) )
+
+    }
+
+    function submitHandler(event) {
+        event.preventDefault();
+        if(formData.password != formData.confirmPassword) {
+            toast.error("Passwords do not match");
+            return ;
+        }
