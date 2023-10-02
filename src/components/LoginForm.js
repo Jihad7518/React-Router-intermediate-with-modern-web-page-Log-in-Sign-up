@@ -50,4 +50,27 @@ const[showPassword, setShowPassword] = useState(false);
                 className='bg-richblack-800 rounded-[0.5rem] text-richblack-5 w-full p-[12px]'
             />
         </label>
+<label className='w-full relative'>
+            <p className='text-[0.875rem] text-richblack-5 mb-1 leading-[1.375rem]'>
+                Password<sup className='text-pink-200'>*</sup>
+            </p>
+            <input 
+                required
+                type= {showPassword ? ("text") : ("password")}
+                value = {formData.password}
+                onChange={changeHandler}
+                placeholder="Enter Password"
+                name="password"
+                className='bg-richblack-800 rounded-[0.5rem] text-richblack-5 w-full p-[12px]'
+            />
+
+            <span 
+            className='absolute right-3 top-[38px] cursor-pointer'
+            onClick={() => setShowPassword((prev) => !prev)}>
+                {showPassword ? 
+
+                (<AiOutlineEyeInvisible fontSize={24} fill='#AFB2BF'/>) : 
+
+                (<AiOutlineEye fontSize={24} fill='#AFB2BF'/>)}
+            </span>
 
