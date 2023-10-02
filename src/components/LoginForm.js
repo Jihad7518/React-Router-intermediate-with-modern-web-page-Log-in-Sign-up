@@ -11,4 +11,24 @@ const LoginForm = ({setIsLoggedIn}) => {
     const [formData, setFormData] = useState( {
         email:"", password:""
     })
+const[showPassword, setShowPassword] = useState(false);
 
+    function changeHandler(event) {
+
+        setFormData( (prevData) =>(
+            {
+                ...prevData,
+                [event.target.name]:event.target.value
+            }
+        ) )
+
+    }
+
+    function submitHandler(event) {
+        event.preventDefault();
+        setIsLoggedIn(true);
+        toast.success("Logged In");
+        console.log("Printing the formData ");
+        console.log(formData)
+        navigate("/dashboard");
+    }
