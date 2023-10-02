@@ -73,4 +73,19 @@ const[showPassword, setShowPassword] = useState(false);
 
                 (<AiOutlineEye fontSize={24} fill='#AFB2BF'/>)}
             </span>
+ <Link to="#">
+                <p className='text-xs mt-1 text-blue-100 max-w-max ml-auto'>
+                    Forgot Password
+                </p>
+            </Link>
+        </label>
 
+        <button className='bg-yellow-50 rounded-[8px] font-medium text-richblack-900 px-[12px] py-[8px] mt-6'>
+            Sign In
+        </button>
+
+    </form>
+  )
+}
+
+export default LoginForm
