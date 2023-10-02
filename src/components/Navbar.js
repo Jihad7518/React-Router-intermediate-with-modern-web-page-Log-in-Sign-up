@@ -7,7 +7,8 @@ import {toast} from "react-hot-toast"
 const Navbar = (props) => {
     let isLoggedIn = props.isLoggedIn;
     let setIsLoggedIn = props.setIsLoggedIn;
-return (
+
+  return (
     <div className='flex justify-between items-center w-11/12 max-w-[1160px] py-4 mx-auto'>
 
         <Link to="/"> 
@@ -27,7 +28,8 @@ return (
                 </li>
             </ul>
         </nav>
-{/* Login - SignUp - LogOut - Dashboard */}
+
+        {/* Login - SignUp - LogOut - Dashboard */}
         <div className='flex items-center gap-x-4'>
             { !isLoggedIn &&
                 <Link to="/login">
@@ -45,7 +47,7 @@ return (
                     </button>
                 </Link>
             }
-{ isLoggedIn &&
+            { isLoggedIn &&
                 <Link to="/">
                     <button onClick={() => {
                         setIsLoggedIn(false);
@@ -71,3 +73,5 @@ return (
     </div>
   )
 }
+
+export default Navbar
