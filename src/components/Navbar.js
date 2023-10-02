@@ -27,3 +27,21 @@ return (
                 </li>
             </ul>
         </nav>
+{/* Login - SignUp - LogOut - Dashboard */}
+        <div className='flex items-center gap-x-4'>
+            { !isLoggedIn &&
+                <Link to="/login">
+                    <button className='bg-richblack-800 text-richblack-100 py-[8px] 
+                    px-[12px] rounded-[8px] border border-richblack-700'>
+                        Log in
+                    </button>
+                </Link>
+            }
+            { !isLoggedIn &&
+                <Link to="/signup">
+                    <button  className='bg-richblack-800 text-richblack-100 py-[8px] 
+                    px-[12px] rounded-[8px] border border-richblack-700'>
+                        Sign up
+                    </button>
+                </Link>
+            }
